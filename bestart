@@ -1,0 +1,9 @@
+sudo apt update
+sudo apt install openjdk-11-jdk -y
+sudo apt install tomcat9 -y
+sudo systemctl enable tomcat9
+sudo systemctl start tomcat9
+#curl localhost:8080
+wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
+chmod +x cloud_sql_proxy
+./cloud_sql_proxy -instances=final-task-akasatau:us-central1:akasatau-postgres=tcp:5432
